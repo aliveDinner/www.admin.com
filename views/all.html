@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>掌印 - 掌控印章安全</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel="shortcut icon" href="../resources/images/favicon.ico">
+<link rel="stylesheet" href="../resources/css/basic.css">
+<link rel="stylesheet" href="../resources/js/plugin/layui/css/layui.css">
+<link rel="stylesheet" href="../resources/css/style.css">
+<script src="../resources/js/plugin/jquery-1.10.2.min.js"></script>
+<script src="../resources/js/plugin/layui/layui.js"></script>
+<script src="../resources/js/common.js"></script>
+</head>
+
+<body>
+    <div class="layui-layout layui-layout-admin">
+		
+		<!-- 公用页头 -->		
+        <div class="layui-header">
+            <div class="layui-logo"><a href="#" title="掌印 - 掌控印章安全"></a></div>
+            
+            <div class="layui-box">
+                <div class="layui-layout-left">
+                    <span title="上海建业信息科技股份有限公司">上海建业信息科技股份有限公司</span>
+                    <b class="layui-elip"><a href="#" title="上海建工项目够章合同送达您审批">消息提示：上海建工项目够章合同送达您审批</a></b>
+                </div><!-- layui-layout-left -->
+                
+                <ul class="layui-nav layui-layout-right">
+                    <li class="layui-nav-item">
+                        <div class="user">
+                        	<img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                            <a class="user_name" href="javascript:;"><b>王麻子</b></a>
+                            
+                            <dl class="layui-nav-child user_more">
+                                <dd><a class="icon_1" href="#">个人资料</a></dd>
+                                <dd><a class="icon_2" href="#">修改密码</a></dd>
+                                <dd><a class="icon_3" href="#">切换企业</a></dd>
+                            </dl>
+                        </div><!-- user -->
+                    </li>
+                    
+                    <li class="layui-nav-item"><a class="admin" href="#">系统</a></li>
+                    <li class="layui-nav-item"><a class="out" href="#">退出</a></li>
+                </ul>
+            </div><!-- layui-box -->
+        </div><!-- layui-header -->
+                
+        <!-- 左侧导航 -->
+        <div class="layui-side">
+            <div class="layui-side-scroll">
+                <ul class="layui-nav layui-nav-tree">
+                    <li class="layui-nav-item nav_1 layui-this"><a class="icon" href="javascript:;">首页</a></li>
+                    <li class="layui-nav-item nav_2"><a class="icon" href="javascript:;">用印管理</a></li>
+                    <li class="layui-nav-item nav_3"><a class="icon" href="javascript:;">印章库</a></li>
+                    
+                    <li class="layui-nav-item nav_4">
+                        <a class="icon" href="javascript:;">流程审批</a>
+                        
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">待审批任务</a></dd>
+                            <dd><a href="javascript:;">已审批任务</a></dd>
+                        </dl>
+                    </li>
+                    
+                    <li class="layui-nav-item nav_5">
+                        <a class="icon" href="javascript:;">统计报表</a>
+                        
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">印章库存统计</a></dd>
+                            <dd><a href="javascript:;">用印申请统计</a></dd>
+                            <dd><a href="javascript:;">使用次数统计</a></dd>
+                        </dl>
+                    </li>
+                    
+                    <li class="layui-nav-item nav_6">
+                        <a class="icon" href="javascript:;">预警信息</a>
+                        
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:;">非法使用提醒</a></dd>
+                            <dd><a href="javascript:;">超期未使用预警</a></dd>
+                            <dd><a href="javascript:;">审批通过未用印</a></dd>
+                        </dl>
+                    </li>
+                    
+                    <li class="layui-nav-item nav_7"><a class="icon" href="javascript:;">往来单位</a></li>
+                    
+                </ul>
+            </div><!-- layui-side-scroll -->
+        </div><!-- layui-side -->
+		
+        <!-- 主体内容 -->
+		<div class="layui-body"> 
+			<div class="cont">
+            
+            	<div class="com_screen">
+                	
+                    <div class="title">
+                    	<h1 class="layui-col-md9">用印管理</h1>
+                        
+                        <!-- 批量操作按钮 -->
+                        <div class="layui-col-md9 layui-hide checked_btn">
+                        	<a class="layui-btn layui-btn-primary" href="javascript:;"><i class="layui-icon">&#xe640;</i>批量删除</a>
+                        </div><!-- checked_btn -->
+                        
+                        <!-- 新增按钮 -->	
+                        <div class="layui-col-md3 more_btn">
+                        	<a class="layui-btn layui-btn-radius com_btn_add layer" data-type="right_add_box" href="javascript:;"><i>+</i>添加</a>
+                            
+                            <dl class="com_select_btn">
+                            	<dt><a class="layui-btn layui-btn-radius layui-btn-primary select_btn" href="javascript:;"><i>操作</i></a></dt>
+                                <dd>
+									<a href="javascript:;"><i class="icon_1">批量导入</i></a>
+                                    <a href="javascript:;"><i class="icon_2">批量导出</i></a>
+                                    <a href="javascript:;"><i class="icon_3">下载表格</i></a>
+                                </dd>
+                            </dl>
+                        </div><!-- more_btn -->
+                    </div><!-- title -->
+                    
+                    <div class="screen_form">
+                    	
+                        <!-- 搜索框 -->
+                        <div class="com_so">
+                        	<input placeholder="请输入文件名称/申请人" type="text" />
+                            <a href="javascript:;"><i class="layui-icon">&#xe615;</i></a>
+                        </div><!-- com_so -->
+                        
+                        <!-- 筛选框 -->
+                        <div class="screen_box">
+                        	<a class="layui-btn layui-btn-primary box_btn" href="javascript:;">筛选</a>
+                            
+                            <div class="box_cont">
+                                
+                                <ul class="layui-form">
+                                    <li class="layui-form-item">
+                                    	<label class="layui-form-label">选择</label>
+                                        <div class="layui-input-block">
+                                        	<input lay-skin="primary" title="选项" type="checkbox" />
+                                        </div><!-- layui-input-block -->
+                                    </li>
+                                    
+                                    <li class="layui-form-item">
+                                    	<label class="layui-form-label">下拉</label>
+                                    	<div class="layui-input-block">
+                                        	<select><option>请选择</option><option>选项一</option><option>选项二</option></select>
+                                        </div><!-- layui-input-block -->
+                                    </li>
+                                    
+                                    <li class="layui-form-item">
+                                    	<label class="layui-form-label">时间段</label>
+                                    	<div class="layui-input-block">
+                                        	<input id="date" class="layui-input" placeholder="开始时间 - 结束时间" type="text" />
+                                        </div><!-- layui-input-block -->
+                                    </li>
+                                    
+                                    <li class="layui-form-item">
+                                        <label class="layui-form-label">区间</label>
+                                        
+                                        <div class="layui-input-block">
+                                            <div class="layui-input-inline"><input class="layui-input" placeholder="最小值" type="text" /></div>
+                                            <div class="layui-form-mid">-</div>
+                                            <div class="layui-input-inline"><input class="layui-input" placeholder="最大值" type="text" /></div>
+                                        </div><!-- layui-input-block -->
+                                    </li>
+                                </ul>
+                                
+                                <div class="box_cont_btn">
+                                    <a class="layui-btn layui-btn-big com_btn_inquiry" href="javascript:;">查询</a>
+                            		<a class="layui-btn layui-btn-big layui-btn-primary" href="javascript:;">重置</a>
+                                </div><!-- box_cont_btn -->
+                                	
+                            </div><!-- box_cont -->
+                        </div><!-- screen_box -->
+                        
+                        <a class="layui-btn layui-btn-primary box_btn reset_btn" href="javascript:;">刷新</a>
+                    </div><!-- screen_form -->
+                </div><!-- com_screen -->
+                
+                <!-- 表格 -->
+                <div class="table">
+                    <table class="layui-table" lay-even lay-skin="nob" lay-data="{url:'json/table/demo1.json',limit:10,page:true,loading:false}" lay-filter="tabel">
+                        <thead>
+                            <tr>
+                                <th lay-data="{width:50,checkbox:true}"></th>
+                                <th lay-data="{field:'num',width:50,unresize:true}">序号</th>
+                                <th lay-data="{field:'name',width:230,templet:'#name'}">文件名称</th>
+                                <th lay-data="{field:'typename',width:200,sort:true}">文件类型</th>
+                                <th lay-data="{field:'price',width:120,sort:true}">金额(元)</th>
+                                <th lay-data="{field:'department',width:120,sort:true}">所属部门</th>
+                                <th lay-data="{field:'create',width:120,sort:true}">申请人</th>
+                                <th lay-data="{field:'date',width:120,sort:true}">申请时间</th>
+                                <th lay-data="{field:'status',width:120,sort:true}">审批状态</th>
+                                <th lay-data="{field:'useStatus',width:120,sort:true}">用印情况</th>
+                                <th lay-data="{toolbar:'#btn',width:150,sort:true}">操作</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <script type="text/html" id="name">
+                        <a href="javascript:;" class="layui-table-link layer" data-type="right_box">{{d.name || ''}}</a>
+                    </script>
+                    
+                    <script type="text/html" id="btn">
+						<a class="layui-table-link" href="javascript:;">送审</a>
+						<b>|</b>
+						<a class="layui-table-link" href="javascript:;">撤销</a>
+						<b>|</b>
+						<a class="layui-table-link" href="javascript:;">其它操作</a>
+                    </script>
+                </div><!-- table -->
+                
+                <i class="layer" data-type="pay" style=" background-color:#ea6242; bottom:0; color:#fff; font-size:18px; height:40px; line-height:40px; right:0; position:fixed; text-align:center; width:170px;">打 赏 作 者</i>
+            </div><!-- cont -->
+		</div><!-- layui-body -->
+    </div><!-- layui-layout-admin -->
+</body>
+</html>
